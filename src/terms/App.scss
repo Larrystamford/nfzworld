@@ -1,0 +1,75 @@
+.PageWrapper {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.PageContainer {
+  margin-top: 1vh;
+  width: 75%;
+
+  .PointSeparator {
+    border-bottom: 1px solid lightslategrey;
+
+    .mainPoint {
+      font-family: Montserrat Bold;
+      font-style: italic;
+      font-size: 32px;
+
+      @media (max-width: 800px) {
+        font-size: 28px;
+      }
+    }
+    .subPoint {
+      font-family: Montserrat;
+      margin-bottom: 3rem;
+      font-weight: bold;
+    }
+    .subPoint2 {
+      font-family: Montserrat;
+      font-weight: bold;
+    }
+  }
+}
+
+.centerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.percentAndDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  font-size: 20px;
+
+  p {
+    color: rgb(191, 197, 0);
+    font-family: 'Roboto Slab', serif;
+  }
+  span {
+    font-size: 18px;
+
+    @media (max-width: 800px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 95%;
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    font-size: 18px;
+  }
+}

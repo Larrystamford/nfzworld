@@ -1,0 +1,69 @@
+.PageWrapper {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+.ShowRoomContainer {
+  margin-top: 1px;
+  width: 80%;
+
+  .PointSeparator {
+    border-bottom: 1px solid lightslategrey;
+
+    .mainPoint {
+      font-family: Montserrat Bold;
+      font-style: italic;
+      font-size: 32px;
+    }
+    .mainImage {
+      height: 15rem;
+      width: 15rem;
+    }
+    .subPoint {
+      margin-top: 3rem;
+      font-family: Montserrat;
+      margin-bottom: 3rem;
+      font-weight: bold;
+    }
+    .titleButton {
+      font-size: 20px;
+      text-align: center;
+      width: 12rem;
+      height: 3.5rem;
+      color: #fff;
+      background-color: rgb(71, 71, 67);
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.centeringDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.leftDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    font-family: Montserrat Bold;
+    font-style: italic;
+    font-size: 22px;
+  }
+}
