@@ -3,6 +3,7 @@ import './App.scss'
 import HeaderMove from '../components/HeaderMove'
 import { useLocation } from 'react-router-dom'
 import axios from '../axios'
+import NfzFooter from '../components/footer/NfzFooter'
 
 export const ShowRoom = () => {
   const [project, setProject] = useState(null)
@@ -52,7 +53,10 @@ export const ShowRoom = () => {
             <h2 className="mainPoint">{project.name}</h2>
             {project.media.map(({ imageLink, videoLink, modelLink }) => (
               <div className="centeringDiv">
-                <img className="mainImage" src={imageLink} />
+                <img
+                  className="mainImage"
+                  src="/images/nfz-founders-undies-w-bg.png"
+                />
               </div>
             ))}
 
@@ -113,6 +117,7 @@ export const ShowRoom = () => {
           </div>
         </div>
       )}
+      <NfzFooter />
     </div>
   )
 }

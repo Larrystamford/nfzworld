@@ -100,15 +100,17 @@ export const Closet = ({
   }
 
   useDidMountEffect(() => {
-    setEquiped(userObj.equiped)
-    for (let i = 0; i < nftIcons.length; i++) {
-      for (const equipedItem of userObj.equiped) {
-        if (equipedItem.token_id === nftIcons[i].token_id) {
-          equipedMain[i + 5] = 1
+    if (userObj) {
+      setEquiped(userObj.equiped)
+      for (let i = 0; i < nftIcons.length; i++) {
+        for (const equipedItem of userObj.equiped) {
+          if (equipedItem.token_id === nftIcons[i].token_id) {
+            equipedMain[i + 5] = 1
+          }
         }
       }
+      setEquip(equipedMain)
     }
-    setEquip(equipedMain)
   }, [userObj, nftIcons])
 
   useEffect(() => {
@@ -489,7 +491,7 @@ export const Closet = ({
                 </div>
                 {equip[itemSelection] ? (
                   <button className="action-button" style={{ color: 'grey' }}>
-                    Equiped
+                    Equipped
                   </button>
                 ) : (
                   <button

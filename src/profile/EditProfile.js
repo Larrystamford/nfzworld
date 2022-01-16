@@ -203,6 +203,9 @@ export const EditProfile = () => {
     }
   }, [username])
 
+  console.log(userObj.twitterUsername, 'wow')
+  const [openTwitter, setOpenTwitter] = useState(false)
+
   useDidMountEffect(() => {
     if (iconSelection === 'star') {
       getAllProjects()
@@ -252,6 +255,28 @@ export const EditProfile = () => {
             <img className="scrollPosition" src="/closeScroll.png" />
           )}
         </button>
+        {userObj && userObj.twitterUsername && !openTwitter ? (
+          <button onClick={() => setOpenTwitter(true)}>
+            <img className="twitterPosition" src="/twitter.png" />
+          </button>
+        ) : userObj && userObj.twitterUsername && openTwitter ? (
+          <button
+            onClick={() => {
+              setOpenTwitter(false)
+              window.open(
+                'https://twitter.com/' + userObj.twitterUsername,
+                '_blank',
+              )
+            }}
+          >
+            <div className="twitterUsernameContainer">
+              <img className="innerTwitterIcon" src="/twitter.png" />
+              <p>@{userObj.twitterUsername}</p>
+            </div>
+          </button>
+        ) : (
+          <div></div>
+        )}
       </div>
       <Closet
         username={username}

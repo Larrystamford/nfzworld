@@ -2,6 +2,7 @@ import React from 'react'
 import './App.scss'
 
 import HeaderMove from '../components/HeaderMove'
+import NfzFooter from '../components/footer/NfzFooter'
 
 export const MetaverseGuarantee = (props) => {
   return (
@@ -41,7 +42,10 @@ export const MetaverseGuarantee = (props) => {
           </p>
         </div>
 
-        <div className="PointSeparator" style={{ borderBottom: '0px' }}>
+        <div
+          className="PointSeparator"
+          style={{ borderBottom: '1px solid grey' }}
+        >
           <div className="centerDiv" style={{ marginTop: '2rem' }}>
             <h2 className="mainPoint" style={{ marginBottom: '3rem' }}>
               🎩 Our Roadmap 🎩
@@ -116,6 +120,7 @@ export const MetaverseGuarantee = (props) => {
           </div>
         </div>
       </div>
+      <NfzFooter />
     </div>
   )
 }

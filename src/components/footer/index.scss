@@ -1,0 +1,27 @@
+.footerContainer {
+  height: 5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  .footerDesc {
+    font-family: Montserrat bold;
+  }
+
+  .footerSocials {
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .footerIcon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
